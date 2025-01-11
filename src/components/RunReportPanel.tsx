@@ -1,9 +1,10 @@
 interface RunReportPanelProps {
   isOpen: boolean;
   onClose: () => void;
+  children?: React.ReactNode; // Allow dynamic content as children
 }
 
-export function RunReportPanel({ isOpen, onClose }: RunReportPanelProps) {
+export function RunReportPanel({ isOpen, onClose, children }: RunReportPanelProps) {
   return (
     <div
       className={`fixed top-20 right-4 h-[90vh] w-96 bg-white border border-gray-200 rounded-lg transform transition-transform duration-300 ease-in-out ${
@@ -20,7 +21,7 @@ export function RunReportPanel({ isOpen, onClose }: RunReportPanelProps) {
         </button>
       </div>
       <div className="p-4 text-gray-600">
-        <p>Output should go here</p>
+        {children ? children : <p>No logs available</p>}
       </div>
     </div>
   );
