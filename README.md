@@ -26,4 +26,4 @@ Welcome to the **AI Shopping Tool with Flow**! This project serves as a proof of
 
    ```bash
    git clone https://github.com/your-username/ai-shopping-tool.git
-   cd ai-shopping-tool
+   npm run dev
